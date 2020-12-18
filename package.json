@@ -1,0 +1,35 @@
+{
+  "name": "runtime-bundler",
+  "version": "1.0.0-alpha.0",
+  "description": "Runtime Bundling of JavaScript Assets",
+  "keywords": [
+    "bundler"
+  ],
+  "author": "Markus Oberlehner",
+  "homepage": "https://github.com/maoberlehner/runtime-bundler",
+  "license": "MIT",
+  "scripts": {
+    "lint:scripts": "eslint --ignore-path .gitignore .",
+    "lint:scripts-md": "eslint --config .eslintrc-md.json --ext md --ignore-path .gitignore .",
+    "lint": "yarn run lint:scripts && yarn run lint:scripts-md",
+    "prepublishOnly": "yarn run lint"
+  },
+  "devDependencies": {
+    "@avalanche/eslint-config": "^4.0.0",
+    "eslint": "^7.15.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-markdown": "^1.0.2",
+    "eslint-plugin-prefer-let": "^1.1.0"
+  },
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maoberlehner/runtime-bundler"
+  },
+  "bugs": {
+    "url": "https://github.com/maoberlehner/runtime-bundler/issues"
+  },
+  "dependencies": {
+    "esbuild": "^0.8.24"
+  }
+}
