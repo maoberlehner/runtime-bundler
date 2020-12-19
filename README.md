@@ -17,7 +17,13 @@ npm install runtime-bundler
 ```
 
 ```js
-// WIP
+// Usage with express
+const { runtimeBundlerMiddleware } = require('runtime-bundler');
+
+const app = express();
+
+// The `assetDirectory` is the path to the assets relative to the current file.
+app.use('/js', runtimeBundlerMiddleware({ assetDirectory: './public/' }));
 ```
 
 ## About
